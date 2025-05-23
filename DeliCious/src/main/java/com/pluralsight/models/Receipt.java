@@ -8,12 +8,12 @@ public class Receipt {
     public void printReceipt(Sandwich sandwich) {
         StringBuilder sb = new StringBuilder();
         sb.append("Receipt Order...\n");
-        sb.append("Sandwich Name: ").append(sandwich.getName()).append("\n");
-        sb.append("Size: ").append(sandwich.getSize()).append(" inches\n");
-        sb.append("Bread Type: ").append(sandwich.getBreadType()).append("\n");
+        sb.append("Sandwich Name: " + sandwich.getName() + "\n");
+        sb.append("Size: " + sandwich.getSize()+ "\n");
+        sb.append("Bread Type: " + sandwich.getBreadType() + "\n");
         sb.append("Toppings:\n");
         for (Toppings topping : sandwich.getToppings()) {
-            sb.append(" - ").append(topping.getName()).append(": $").append(topping.getPrice()).append("\n");
+            sb.append(" - " + topping.getName() + ": $ " + topping.getPrice() + "\n");
             sb.append("Total Price: $").append(String.format("%.2f", sandwich.getPrice())).append("\n");
         }
         sb.append("Thank you for your order!\n");
