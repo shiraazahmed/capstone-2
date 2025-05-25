@@ -1,30 +1,30 @@
 package com.pluralsight.models;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Receipt {
-    public void printReceipt(Sandwich sandwich) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Receipt Order...\n");
-        sb.append("Sandwich Name: " + sandwich.getName() + "\n");
-        sb.append("Size: " + sandwich.getSize()+ "\n");
-        sb.append("Bread Type: " + sandwich.getBreadType() + "\n");
-        sb.append("Toppings:\n");
-        for (Toppings topping : sandwich.getToppings()) {
-            sb.append(" - " + topping.getName() + ": $ " + topping.getPrice() + "\n");
-            sb.append("Total Price: $").append(String.format("%.2f", sandwich.getPrice())).append("\n");
-        }
-        sb.append("Thank you for your order!\n");
-
-        System.out.println(sb);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("receipts.txt", true))) {
-            writer.write(sb.toString());
+    public void receiptReader(Sandwich sandwich) throws FileNotFoundException {
+        try (BufferedReader reader = new BufferedReader(new FileReader("receipts.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
         } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Error! ");
         }
     }
+    public void receiptPrinter(Sandwich sandwich) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("receipts.txt", true))) {
+            writer.write("Receipt for " + sandwich.getName() + "\n");
+            writer.write("Size: " + sandwich.getSize() + "\n");
+            writer.write("Price: " + sandwich.getPrice() + "\n");
+            writer.write("Toppings: " + sandwich.getToppings() + "\n");
+            writer.write("Thank you for your order!\n");
+        } catch (IOException e) {
+            System.out.println("Error! ");
+        }
+
+    }
+
 }
 
