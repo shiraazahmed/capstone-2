@@ -1,5 +1,7 @@
 package com.pluralsight.models;
 
+import com.pluralsight.models.toppings.Toppings;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +53,7 @@ public class Sandwich {
     public double getPrice() {
         double totalPrice = price;
         for (Toppings topping : toppings) {
-            totalPrice += topping.getPrice();
+            totalPrice += topping.getMeatPrice();
         }
         return totalPrice;
     }
@@ -79,6 +81,12 @@ public class Sandwich {
     public void addTopping(Toppings topping) {
         toppings.add(topping);
     }
+    public static final List<String> Sandwich = List.of(
+            "White",
+            "Wheat",
+            "Wrap",
+            "Rye");
+
 
     @Override
     public String toString() {
@@ -90,4 +98,8 @@ public class Sandwich {
                 ", toppings=" + getToppings() +
                 '}';
     }
-}
+};
+
+
+
+
