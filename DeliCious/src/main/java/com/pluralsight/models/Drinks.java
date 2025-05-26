@@ -9,7 +9,7 @@ public class Drinks {
         this.price = calculatePrice(size);
     }
     private double calculatePrice(String size) {
-        switch (size.toLowerCase()) {
+        switch (size) {
             case "small":
                 return 2.00;
             case "medium":
