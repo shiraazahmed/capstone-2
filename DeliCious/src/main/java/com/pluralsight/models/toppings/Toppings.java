@@ -22,6 +22,9 @@ public class Toppings  {
         this.price = price;
     }
 
+    public Toppings() {
+    }
+
     public String getMeatName() {
         return name;
     }

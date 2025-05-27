@@ -11,6 +11,7 @@ public class Sandwich {
     private double price;
     private String breadType;
     private List<Toppings> toppings;
+    private boolean toasted;
 
 
     public Sandwich(String name, int size, String breadType) {
@@ -19,6 +20,7 @@ public class Sandwich {
         this.breadType = breadType;
         this.price = calculatePrice(size);
         this.toppings = new ArrayList<>();
+        this.toasted = false;
     }
 
     private double calculatePrice(int size) {
@@ -32,7 +34,12 @@ public class Sandwich {
         }
         return basePrice;
     }
-
+    public boolean isToasted() {
+        return toasted;
+    }
+    public void setToasted(boolean toasted) {
+        this.toasted = toasted;
+    }
     public String getName() {
         return name;
     }
@@ -95,10 +102,11 @@ public class Sandwich {
                 ", name='" + getName() + '\'' +
                 ", price=" + getPrice() +
                 ", size=" + getSize() +
+                ", toasted=" + isToasted() +
                 ", toppings=" + getToppings() +
                 '}';
     }
-};
+}
 
 
 
