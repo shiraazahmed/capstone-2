@@ -1,6 +1,6 @@
 package com.pluralsight.models;
 
-import com.pluralsight.models.toppings.Toppings;
+import com.pluralsight.models.toppings.Topping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ public class Sandwich {
     private int size;
     private double price;
     private String breadType;
-    private List<Toppings> toppings;
+    private List<Topping> toppings;
     private boolean toasted;
 
 
@@ -34,12 +34,7 @@ public class Sandwich {
         }
         return basePrice;
     }
-    public boolean isToasted() {
-        return toasted;
-    }
-    public void setToasted(boolean toasted) {
-        this.toasted = toasted;
-    }
+
     public String getName() {
         return name;
     }
@@ -54,13 +49,20 @@ public class Sandwich {
 
     public void setSize(int size) {
         this.size = size;
-        this.price = calculatePrice(size);
+    }
+
+    public boolean isToasted() {
+        return toasted;
+    }
+
+    public void setToasted(boolean toasted) {
+        this.toasted = toasted;
     }
 
     public double getPrice() {
         double totalPrice = price;
-        for (Toppings topping : toppings) {
-            totalPrice += topping.getMeatPrice();
+        for (Topping topping : toppings) {
+            totalPrice += topping.getPrice();
         }
         return totalPrice;
     }
@@ -77,15 +79,15 @@ public class Sandwich {
         this.breadType = breadType;
     }
 
-    public List<Toppings> getToppings() {
+    public List<Topping> getToppings() {
         return toppings;
     }
 
-    public void setToppings(List<Toppings> toppings) {
+    public void setToppings(List<Topping> toppings) {
         this.toppings = toppings;
     }
 
-    public void addTopping(Toppings topping) {
+    public void addTopping(Topping topping) {
         toppings.add(topping);
     }
     public static final List<String> Sandwich = List.of(
@@ -93,6 +95,18 @@ public class Sandwich {
             "Wheat",
             "Wrap",
             "Rye");
+
+    public static final List<String> Sauces = List.of(
+            "Mayo",
+            "Mustard",
+            "Ketchup",
+            "Ranch",
+            "Thousand Islands",
+            "Vinaigrette");
+
+    public static final List<String> Sides = List.of(
+            "Au Jus",
+            "Special Sauce");
 
 
     @Override

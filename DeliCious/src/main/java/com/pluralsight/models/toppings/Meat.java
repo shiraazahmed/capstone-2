@@ -2,12 +2,12 @@ package com.pluralsight.models.toppings;
 
 import java.util.List;
 
-public class Meats extends Toppings {
-    private String meatName;
-    private int meatSize;
-    private double meatPrice;
+public class Meat extends Topping {
 
-    public Meats(String name, double price, String meatName, int meatSize, double meatPrice) {
+    private int meatSize;
+
+
+    public Meat(String name, double price, String meatName, int meatSize, double meatPrice) {
         super(name, price);
         this.meatName = meatName;
         this.meatSize = meatSize;
@@ -50,7 +50,7 @@ public class Meats extends Toppings {
             "Salami",
             "Roast Beef");
 
-    public Meats(String name, double price) {
+    public Meat(String name, double price) {
         super(name, price);
     }
 
@@ -82,7 +82,7 @@ public class Meats extends Toppings {
 
     @Override
     public String toString() {
-        return "com.pluralsight.models.toppings.Meats{" +
+        return "com.pluralsight.models.toppings.Meat{" +
                 "meatName='" + getMeatName() + '\'' +
                 ", meatPrice=" + getMeatPrice() +
                 ", meatSize=" + getMeatSize() +

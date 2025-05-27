@@ -2,7 +2,7 @@ package com.pluralsight.models.toppings;
 
 import java.util.List;
 
-public class Toppings  {
+public class Topping {
     private String name;
     private double price;
 
@@ -17,34 +17,29 @@ public class Toppings  {
             "Guacamole",
             "Mushrooms");
 
-    public Toppings(String name, double price) {
+    public Topping(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public Toppings() {
+    public Topping() {
     }
-
-    public String getMeatName() {
+    public String getName() {
         return name;
     }
-
-    public void setMeatName(String meatName) {
-        this.name = meatName;
-    }
-
-    public double getMeatPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setMeatPrice(double meatPrice) {
-        this.price = meatPrice;
-    }
+
 
     @Override
     public String toString() {
-        return "name='" + getMeatName() + '\'' +
-                ", price=" + getMeatPrice() +
+        return "com.pluralsight.models.toppings.Topping{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
+
+
 }

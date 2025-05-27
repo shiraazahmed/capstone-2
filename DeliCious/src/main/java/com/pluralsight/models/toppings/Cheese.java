@@ -2,31 +2,8 @@ package com.pluralsight.models.toppings;
 
 import java.util.List;
 
-public class Cheese extends Toppings {
-    private String cheeseName;
-    private double cheesePrice;
+public class Cheese extends Topping {
 
-    public Cheese(String name, double price, String cheeseName, double cheesePrice) {
-        super(name, price);
-        this.cheeseName = cheeseName;
-        this.cheesePrice = cheesePrice;
-    }
-
-    public String getCheeseName() {
-        return cheeseName;
-    }
-
-    public void setCheeseName(String cheeseName) {
-        this.cheeseName = cheeseName;
-    }
-
-    public double getCheesePrice() {
-        return cheesePrice;
-    }
-
-    public void setCheesePrice(double cheesePrice) {
-        this.cheesePrice = cheesePrice;
-    }
     public static final List<String> CheeseList = List.of(
             "Cheddar",
             "Swiss",
@@ -34,6 +11,10 @@ public class Cheese extends Toppings {
             "Pepper Jack",
             "Mozzarella",
             "American");
+
+    public Cheese(String cheddar, double v) {
+        super(cheddar, v);
+    }
 
 
     private static double getPrice(int size) {
@@ -61,11 +42,5 @@ public class Cheese extends Toppings {
         }
     }
 
-    @Override
-    public String toString() {
-        return "com.pluralsight.models.toppings.Cheese{" +
-                "cheeseName='" + getCheeseName() + '\'' +
-                ", cheesePrice=" + getCheesePrice() +
-                '}';
-    }
+
 }

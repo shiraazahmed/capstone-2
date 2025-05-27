@@ -18,7 +18,7 @@ public class Receipt {
             writer.write("Receipt for " + sandwich.getName() + "\n");
             writer.write("Size: " + sandwich.getSize() + "\n");
             writer.write("Price: " + sandwich.getPrice() + "\n");
-            writer.write("Toppings: " + sandwich.getToppings() + "\n");
+            writer.write("Topping: " + sandwich.getToppings() + "\n");
             writer.write("Thank you for your order!\n");
         } catch (IOException e) {
             System.out.println("Error! ");
