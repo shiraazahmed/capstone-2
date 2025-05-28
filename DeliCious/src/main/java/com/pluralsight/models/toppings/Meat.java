@@ -3,25 +3,13 @@ package com.pluralsight.models.toppings;
 import java.util.List;
 
 public class Meat extends Topping {
-
     private int meatSize;
 
 
     public Meat(String name, double price, String meatName, int meatSize, double meatPrice) {
         super(name, price);
-        this.meatName = meatName;
         this.meatSize = meatSize;
-        this.meatPrice = meatPrice;
-    }
 
-    @Override
-    public String getMeatName() {
-        return meatName;
-    }
-
-    @Override
-    public void setMeatName(String meatName) {
-        this.meatName = meatName;
     }
 
     public int getMeatSize() {
@@ -30,16 +18,6 @@ public class Meat extends Topping {
 
     public void setMeatSize(int meatSize) {
         this.meatSize = meatSize;
-    }
-
-    @Override
-    public double getMeatPrice() {
-        return meatPrice;
-    }
-
-    @Override
-    public void setMeatPrice(double meatPrice) {
-        this.meatPrice = meatPrice;
     }
 
     public static final List<String> Meats = List.of(
@@ -55,7 +33,7 @@ public class Meat extends Topping {
     }
 
 
-    private static double getPrice(int size) {
+    public static double getPrice(int size) {
         switch (size) {
             case 4:
                 return 1.00;
@@ -83,9 +61,7 @@ public class Meat extends Topping {
     @Override
     public String toString() {
         return "com.pluralsight.models.toppings.Meat{" +
-                "meatName='" + getMeatName() + '\'' +
-                ", meatPrice=" + getMeatPrice() +
-                ", meatSize=" + getMeatSize() +
+                "meatSize=" + getMeatSize() +
                 '}';
     }
 }

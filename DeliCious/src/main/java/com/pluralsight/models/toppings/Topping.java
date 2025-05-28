@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Topping {
     private String name;
-    private double price;
+    private static double price;
 
     public static final List<String> ToppingsList = List.of(
             "Lettuce",
@@ -27,7 +27,7 @@ public class Topping {
     public String getName() {
         return name;
     }
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
 

@@ -1,7 +1,7 @@
 package com.pluralsight.models;
 
 public class Drinks {
-    private double price;
+    private static double price;
     private String size;
 
     public Drinks(double price, String size) {
@@ -22,7 +22,7 @@ public class Drinks {
         }
     }
 
-    public double getPrice() {
+    public static double getPrice(int size) {
         return price;
     }
 
@@ -41,8 +41,7 @@ public class Drinks {
     @Override
     public String toString() {
         return "com.pluralsight.models.Drinks{" +
-                "price=" + getPrice() +
-                ", size='" + getSize() + '\'' +
+                "size='" + getSize() + '\'' +
                 '}';
     }
 }
