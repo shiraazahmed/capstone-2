@@ -116,3 +116,93 @@ Sides: Total Price: $8.50
 Thank you for your order, randy!
 
 ----------------------
+05/29/2025 11:37:07
+ Order Summary: 
+Customer: fay
+Bread: Wheat
+Size: 8
+Toasted: No
+Meat: Turkey
+Toppings: Tomatoes, Swiss
+Sauces: BBQ
+Drink: None
+Chips: None
+Sides: Total Price: $7.00
+Thank you for your order, fay!
+
+----------------------
+05/29/2025 14:15:37
+ Order Summary: 
+Customer: null
+Bread: Wheat
+Size: 8
+Toasted: No
+Meat: null
+Toppings: Roast Beef, Provolone Cheese, Lettuce, Tomatoes, Onions, Mustard, Special Sauce
+Sauces: None
+Drink: None
+Chips: None
+Sides: Total Price: $7.00
+Thank you for your order, null!
+
+----------------------
+05/29/2025 14:44:35
+ Order Summary: 
+Customer: shiraaz
+Bread: Wheat
+Size: 12
+Toasted: No
+Meat: null
+Toppings: Roast Beef, Pepper Jack Cheese, Lettuce, Tomatoes, Jalapeños, Vinaigrette, Special Sauce
+Sauces: None
+Drink: None
+Chips: None
+Sides: Total Price: $8.50
+Thank you for your order, shiraaz!
+
+----------------------
+05/29/2025 14:46:32
+ Order Summary: 
+Customer: shiraaz
+Bread: Wheat
+Size: 8
+Toasted: No
+Meat: null
+Toppings: Roast Beef, Provolone Cheese, Lettuce, Tomatoes, Onions, Mustard, Special Sauce
+Sauces: None
+Drink: large ($3.00)
+Chips: None
+Sides: Total Price: $10.00
+Thank you for your order, shiraaz!
+
+----------------------
+05/29/2025 14:53:25
+ Order Summary: 
+Customer: shiraaz
+Bread: Wheat
+Size: 8
+Toasted: No
+Meat: null
+Toppings: Chicken, Cheddar, Lettuce, Tomatoes, Jalapeños, Ranch, Special Sauce
+Sauces: None
+Drink: large ($3.00)
+Chips: None
+Sides: Total Price: $10.00
+Thank you for your order, shiraaz!
+
+----------------------
+05/29/2025 15:01:20
+ Order Summary: 
+Customer: shiraaz
+Bread: Wheat
+Size: 8
+Toasted: No
+Meat: null
+Toppings: Chicken, Cheddar, Lettuce, Tomatoes, Jalapeños, Ranch, Special Sauce
+Sauces: None
+Drink: None
+Chips: None
+Sides: Total Price: $7.00
+Thank you for your order, shiraaz!
+
+----------------------

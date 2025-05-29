@@ -21,12 +21,12 @@ public class Meat extends Topping {
     }
 
     public static final List<String> Meats = List.of(
-            "Bacon",
-            "Chicken",
-            "Ham",
             "Steak",
+            "Ham",
             "Salami",
-            "Roast Beef");
+            "Roast Beef",
+            "Chicken",
+            "Bacon");
 
     public Meat(String name, double price) {
         super(name, price);

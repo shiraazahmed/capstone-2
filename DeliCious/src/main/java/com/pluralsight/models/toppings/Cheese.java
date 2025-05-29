@@ -5,12 +5,10 @@ import java.util.List;
 public class Cheese extends Topping {
 
     public static final List<String> CheeseList = List.of(
-            "Cheddar",
-            "Swiss",
+            "American",
             "Provolone",
-            "Pepper Jack",
-            "Mozzarella",
-            "American");
+            "Cheddar",
+            "Swiss");
 
     public Cheese(String cheddar, double v) {
         super(cheddar, v);

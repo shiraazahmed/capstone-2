@@ -3,6 +3,7 @@ package com.pluralsight.ui;
 import com.pluralsight.models.Drinks;
 import com.pluralsight.models.Receipt;
 import com.pluralsight.models.Sandwich;
+import com.pluralsight.models.SignatureSandwhiches;
 import com.pluralsight.models.toppings.Cheese;
 import com.pluralsight.models.toppings.Topping;
 
@@ -78,7 +79,8 @@ public class Order {
                     toppings.add(new Topping(toppingName, 0.0));
                     System.out.println(toppingName + " added.");
                 }
-            } catch (NumberFormatException Ignore) {}
+            } catch (NumberFormatException Ignore) {
+            }
         }
 
         // select cheese
@@ -113,7 +115,8 @@ public class Order {
                         System.out.println(sauceName + " added.");
                     }
                 }
-            } catch (NumberFormatException ignored) {}
+            } catch (NumberFormatException ignored) {
+            }
         }
 
         // toppings + sauces added to sandwich
@@ -127,7 +130,7 @@ public class Order {
         // choose drink
         System.out.print("Would you like a drink? (yes/no): ");
         if (scanner.nextLine().trim().equalsIgnoreCase("yes")) {
-            System.out.print("Enter drink name: ");
+            System.out.print("Enter the name of the drink you want: ");
             String drinkName = scanner.nextLine();
             System.out.print("Choose drink size (small, medium, large): ");
             String drinkSize = scanner.nextLine().trim();
@@ -137,14 +140,14 @@ public class Order {
         // choose chips
         System.out.print("Would you like chips? (yes/no): ");
         if (scanner.nextLine().trim().equalsIgnoreCase("yes")) {
-            System.out.print("Enter chips name: ");
+            System.out.print("Enter the name of the chips: ");
             chipsName = scanner.nextLine();
         }
 
         // choose sides
-        System.out.print("Would you like au jus? (yes/no): ");
+        System.out.print("Would you like to try au jus? (yes/no): ");
         auJus = scanner.nextLine().trim().equalsIgnoreCase("yes");
-        System.out.print("Would you like special sauce? (yes/no): ");
+        System.out.print("Would you like to try special sauce? (yes/no): ");
         specialSauce = scanner.nextLine().trim().equalsIgnoreCase("yes");
 
         // order summary
@@ -186,10 +189,12 @@ public class Order {
             sb.append("\n");
         }
 
-        if (drink != null) sb.append("Drink: ").append(drink.getSize()).append(" ($").append(String.format("%.2f", drink.getPrice())).append(")").append("\n");
+        if (drink != null)
+            sb.append("Drink: ").append(drink.getSize()).append(" ($").append(String.format("%.2f", drink.getPrice())).append(")").append("\n");
         else sb.append("Drink: None\n");
 
-        if (chipsName != null) sb.append("Chips: ").append(chipsName).append(" ($").append(String.format("%.2f", chipsPrice)).append(")").append("\n");
+        if (chipsName != null)
+            sb.append("Chips: ").append(chipsName).append(" ($").append(String.format("%.2f", chipsPrice)).append(")").append("\n");
         else sb.append("Chips: None\n");
 
         sb.append("Sides: ");
@@ -203,5 +208,47 @@ public class Order {
         sb.append("Thank you for your order, ").append(customerName).append("!\n");
         return sb.toString();
     }
-}
 
+    public void chooseSignatureSandwich() {
+        System.out.println("Welcome to DeliCious");
+        System.out.print("Enter your name: ");
+        customerName = scanner.nextLine();
+
+        List<Sandwich> signatures = List.of(
+                SignatureSandwhiches.spicyDElIcious(),
+                SignatureSandwhiches.hotNFire(),
+                SignatureSandwhiches.veggiePowerZ(),
+                SignatureSandwhiches.classicKidzOriginal(),
+                SignatureSandwhiches.bestHotSeller());
+
+        System.out.println("Choose a signature sandwich:");
+        for (int i = 0; i < signatures.size(); i++) {
+            System.out.println((i + 1) + ". " + signatures.get(i).getName() + " - $" + String.format("%.2f", signatures.get(i).getPrice()));
+        }
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        if (choice < 1 || choice > signatures.size()) {
+            System.out.println("Invalid choice ");
+            return;
+        }
+        System.out.print("Would you like a drink? (yes/no): ");
+        if (scanner.nextLine().trim().equalsIgnoreCase("yes")) {
+            System.out.print("Enter the name of the drink you want: ");
+            String drinkName = scanner.nextLine();
+            System.out.print("Choose drink size (small, medium, large): ");
+            String drinkSize = scanner.nextLine().trim();
+            drink = new Drinks(drinkName, drinkSize);
+        }
+        System.out.print("Would you like chips? (yes/no): ");
+        if (scanner.nextLine().trim().equalsIgnoreCase("yes")) {
+            System.out.print("Enter the name of the chips: ");
+            chipsName = scanner.nextLine();
+        }
+        sandwich = signatures.get(choice - 1);
+        System.out.println(sandwich.getName());
+        String summary = getOrderSummary(new ArrayList<>(sandwich.getToppings()), new ArrayList<>());
+        System.out.println(summary);
+        new Receipt().saveReceipt(summary);
+        System.out.println("Your Order will be ready soon!");
+    }
+}
