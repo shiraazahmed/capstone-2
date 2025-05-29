@@ -28,7 +28,7 @@ public class Order {
 
     public void startOrder() {
         System.out.println("Welcome to DeliCious");
-        System.out.print("Enter your name: ");
+        System.out.print("Enter your name to begin: ");
         customerName = scanner.nextLine();
 
         System.out.println("Choose bread type:");
@@ -99,7 +99,7 @@ public class Order {
         // select multiple sauces
         List<String> saucesList = List.of("Mayo", "Mustard", "Ketchup", "Ranch", "Chipotle", "BBQ");
         List<String> sauces = new ArrayList<>();
-        System.out.println("Choose sauces (enter numbers separated by commas):");
+        System.out.println("Choose sauces (to choose more than one please use commas to separate):");
         for (int i = 0; i < saucesList.size(); i++) {
             System.out.println((i + 1) + ". " + saucesList.get(i));
         }
@@ -112,7 +112,7 @@ public class Order {
                     String sauceName = saucesList.get(sauceIndex);
                     if (!sauces.contains(sauceName)) {
                         sauces.add(sauceName);
-                        System.out.println(sauceName + " added.");
+                        System.out.println(sauceName + " added");
                     }
                 }
             } catch (NumberFormatException ignored) {
@@ -246,9 +246,10 @@ public class Order {
         }
         sandwich = signatures.get(choice - 1);
         System.out.println(sandwich.getName());
-        String summary = getOrderSummary(new ArrayList<>(sandwich.getToppings()), new ArrayList<>());
-        System.out.println(summary);
-        new Receipt().saveReceipt(summary);
+        String OrderSummary = getOrderSummary(new ArrayList<>(sandwich.getToppings()), new ArrayList<>());
+        System.out.println(OrderSummary);
+        new Receipt().saveReceipt(OrderSummary);
+        OrderSummary.trim().equalsIgnoreCase(customerName + "'s Signature Sandwich Order");
         System.out.println("Your Order will be ready soon!");
     }
 }
