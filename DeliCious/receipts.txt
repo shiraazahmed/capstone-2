@@ -1,0 +1,118 @@
+
+--- Order Summary ---
+Customer: shiraaz
+Bread: White
+Size: 12"
+Toasted: Yes
+Toppings: Lettuce, Cheddar
+Sauces: Mayo
+Drink: coke ($1.50)
+Chips: takis ($1.50)
+Total Price: $11.50
+Thank you for your order, shiraaz!
+
+----------------------
+
+--- Order Summary ---
+Customer: shiraaz
+Bread: White
+Size: 12"
+Toasted: Yes
+Meat: Chicken (Extra)
+Toppings: Lettuce, Onions, Guacamole, Cheddar (Extra Cheese)
+Sauces: Mayo, Ketchup, Chipotle
+Drink: coke ($2.50)
+Chips: None
+Sides: Special Sauce
+Total Price: $11.00
+Thank you for your order, shiraaz!
+
+----------------------
+
+--- Order Summary ---
+Customer: shiraaz
+Bread: White
+Size: 12"
+Toasted: Yes
+Meat: Turkey (Extra)
+Toppings: Onions, Pickles, Tomatoes, Cheddar (Extra Cheese)
+Sauces: Mayo, Mustard, Ketchup
+Drink: large ($3.00)
+Chips: None
+Sides: Special Sauce
+Total Price: $11.50
+Thank you for your order, shiraaz!
+
+----------------------
+ Order Summary: 
+Customer: shiraaz
+Bread: White
+Size: 12
+Toasted: Yes
+Meat: Chicken (Extra)
+Toppings: Onions, Tomatoes, Pickles, Cheddar (Extra Cheese)
+Sauces: Mayo, Mustard, Ketchup, Ranch
+Drink: large ($3.00
+Chips: None
+Sides: Total Price: $11.50
+Thank you for your order, shiraaz!
+
+----------------------
+ Order Summary: 
+Customer: tom
+Bread: White
+Size: 12
+Toasted: Yes
+Meat: Turkey (Extra)
+Toppings: Lettuce, Peppers, Onions, Cheddar
+Sauces: Mayo, Mustard, Chipotle
+Drink: large ($3.00
+Chips: None
+Sides: Total Price: $11.50
+Thank you for your order, tom!
+
+----------------------
+ Order Summary: 
+Customer: shiraaz
+Bread: Wheat
+Size: 12
+Toasted: Yes
+Meat: Roast Beef (Extra)
+Toppings: Onions, Pickles, Jalapeños, Pepper Jack (Extra Cheese)
+Sauces: Mayo, Mustard, Chipotle, Ranch
+Drink: large ($3.00
+Chips: fritos ($1.50
+Sides: Total Price: $13.00
+Thank you for your order, shiraaz!
+
+----------------------
+05/29/2025 10:55:28
+ Order Summary: 
+Customer: SRK
+Bread: Wheat
+Size: 12
+Toasted: Yes
+Meat: Turkey (Extra)
+Toppings: Onions, Cheddar (Extra Cheese)
+Sauces: Chipotle
+Drink: large ($3.00
+Chips: doritos ($1.50
+Sides: Total Price: $13.00
+Thank you for your order, SRK!
+
+----------------------
+05/29/2025 11:24:19
+ Order Summary: 
+Customer: randy
+Bread: White
+Size: 12
+Toasted: Yes
+Meat: Turkey
+Toppings: Onions, Tomatoes, Lettuce, American (Extra Cheese)
+Sauces: Mayo
+Drink: med ($0.00)
+Chips: None
+Sides: Total Price: $8.50
+Thank you for your order, randy!
+
+----------------------

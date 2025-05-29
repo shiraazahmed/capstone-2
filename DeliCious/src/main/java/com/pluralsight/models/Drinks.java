@@ -4,7 +4,7 @@ public class Drinks {
     private static double price;
     private String size;
 
-    public Drinks(double price, String size) {
+    public Drinks(String price, String size) {
         this.size = size;
         this.price = calculatePrice(size);
     }
@@ -22,7 +22,7 @@ public class Drinks {
         }
     }
 
-    public static double getPrice(int size) {
+    public static double getPrice() {
         return price;
     }
 

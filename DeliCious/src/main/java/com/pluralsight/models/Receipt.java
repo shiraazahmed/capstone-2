@@ -1,20 +1,16 @@
 package com.pluralsight.models;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Receipt {
-    public void receiptReader(Sandwich sandwich) throws FileNotFoundException {
-        try (BufferedReader reader = new BufferedReader(new FileReader("receipts.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error! ");
-        }
-    }
+    public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+
     public void receiptPrinter(Sandwich sandwich) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("receipts.txt", true))) {
+            writer.write(LocalDateTime.now().format(formatter)+ "\n");
             writer.write("Receipt for " + sandwich.getName() + "\n");
             writer.write("Size: " + sandwich.getSize() + "\n");
             writer.write("Price: " + sandwich.getPrice() + "\n");
@@ -26,5 +22,14 @@ public class Receipt {
 
     }
 
+    public void saveReceipt(String orderSummary) {
+        try (FileWriter writer = new FileWriter("receipts.txt", true)) {
+            writer.write(LocalDateTime.now().format(formatter)+ "\n");
+            writer.write(orderSummary);
+            writer.write("\n----------------------\n");
+        } catch (IOException e) {
+            System.out.println("Error saving receipt: " + e.getMessage());
+        }
+    }
 }
 

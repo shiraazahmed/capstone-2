@@ -17,7 +17,7 @@ public class Cheese extends Topping {
     }
 
 
-    private static double getPrice(int size) {
+    public static double getPrice(int size) {
         switch (size) {
             case 4:
                 return .75;
