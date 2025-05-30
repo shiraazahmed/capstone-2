@@ -27,6 +27,7 @@ public class Order {
     private Drinks drink;
 
     public void startOrder() {
+
         System.out.println("Welcome to DeliCious");
         System.out.print("Enter your name to begin: ");
         customerName = scanner.nextLine();
@@ -153,6 +154,8 @@ public class Order {
         System.out.println(orderSummary);
         new Receipt().saveReceipt(orderSummary);
         System.out.println("Order saved!");
+        System.out.println("Your order will be ready soon!");
+
     }
 
     private String getOrderSummary(List<Topping> toppings, List<String> sauces) {
@@ -248,5 +251,6 @@ public class Order {
         System.out.println(OrderSummary);
         new Receipt().saveReceipt(OrderSummary);
         System.out.println("Your Order will be ready soon!");
+
     }
 }

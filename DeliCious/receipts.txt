@@ -221,3 +221,18 @@ Sides: Total Price: $10.00
 Thank you for your order, shiraaz!
 
 ----------------------
+05/30/2025 11:28:00
+ Order Summary: 
+Customer: shiraaz
+Bread: White
+Size: 4
+Toasted: No
+Meat: Turkey
+Toppings: Onions, Jalapeños, American
+Sauces: Chipotle, BBQ
+Drink: l ($0.00)
+Chips: None
+Sides: Total Price: $5.50
+Thank you for your order, shiraaz!
+
+----------------------
